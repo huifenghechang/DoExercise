@@ -1,4 +1,4 @@
-package code_01_MinSum;
+package code_01_minSum;
 
 public class MinSum_S {
     public static void main(String[] args){
