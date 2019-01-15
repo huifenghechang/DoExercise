@@ -1,6 +1,6 @@
 package code_01_minSum;
 
-public class MinSum_S {
+public class MinSum_S01 {
     public static void main(String[] args){
         int[] nums = {1,3,4,2,5};
         if (!validity(nums)){
