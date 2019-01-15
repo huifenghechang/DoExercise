@@ -1,7 +1,7 @@
 package code_05_mergeSort;
 
 
-import static code_02_bubbleSort.BubbleSort.PrintfArray;
+import static utils.utils.PrintfArray;
 
 public class MergeSort_S01 {
 

@@ -1,6 +1,7 @@
 package code_03_selectionSort;
 
-import static code_02_bubbleSort.BubbleSort.PrintfArray;
+
+import static utils.utils.PrintfArray;
 
 /*
 * 选择排序基本思路：

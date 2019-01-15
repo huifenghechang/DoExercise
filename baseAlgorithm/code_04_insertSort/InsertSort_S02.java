@@ -1,6 +1,6 @@
 package code_04_insertSort;
 
-import static code_02_bubbleSort.BubbleSort.PrintfArray;
+import static utils.utils.PrintfArray;
 
 /*
 * 插入排序，将前面的数列看做有序的，不断地往前插入

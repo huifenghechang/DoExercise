@@ -1,5 +1,7 @@
 package code_02_bubbleSort;
 
+import static utils.utils.PrintfArray;
+
 public class BubbleSort {
 
     public static void bubble(int[] arr){
@@ -21,12 +23,6 @@ public class BubbleSort {
         arr[j] = temp;
     }
 
-    public static void PrintfArray(int[] array){
-        for (int i=0;i<array.length;i++){
-            System.out.print(array[i]+"、");
-        }
-        System.out.println();
-    }
     public static void main(String[] args){
         int[] numbers = {1,3,2,5,7};
         System.out.print("The origin is:");

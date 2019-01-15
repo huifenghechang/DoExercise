@@ -1,6 +1,7 @@
 package code_04_insertSort;
 
-import static code_02_bubbleSort.BubbleSort.PrintfArray;
+
+import static utils.utils.PrintfArray;
 
 /*
 
