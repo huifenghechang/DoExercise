@@ -2,6 +2,7 @@ package code_04_insertSort;
 
 
 import static utils.utils.PrintfArray;
+import static utils.utils.swap;
 
 /*
 
@@ -36,11 +37,7 @@ public class InsertSort_S01_err {
         }
     }
 
-    public static void swap(int[]arr,int i,int j){
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
+
 
     public static void main(String[] args){
 

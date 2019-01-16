@@ -1,6 +1,7 @@
 package code_04_insertSort;
 
 import static utils.utils.PrintfArray;
+import static utils.utils.swap;
 
 /*
 * 插入排序，将前面的数列看做有序的，不断地往前插入
@@ -32,17 +33,9 @@ public class InsertSort_S02 {
         }
     }
 
-
-
-    public static void swap(int[]arr,int i,int j){
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-
     public static void main(String[] args){
 
-        int[] numbers = {1,3,2,5,7};
+        int[] numbers = {1,3,2,5,7,90};
         System.out.print("The origin is:");
         PrintfArray(numbers);
         insertSort(numbers);
