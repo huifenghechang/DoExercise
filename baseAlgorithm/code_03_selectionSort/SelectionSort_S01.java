@@ -39,7 +39,7 @@ public class SelectionSort_S01 {
     }
     public static void main(String[] args){
 
-        int[] numbers = {1,3,2,5,7};
+        int[] numbers = {1,3,2,5,7,98,46};
         System.out.print("The origin is:");
         PrintfArray(numbers);
         selectionSort(numbers);
