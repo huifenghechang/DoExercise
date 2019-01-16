@@ -2,7 +2,7 @@ package code_02_bubbleSort;
 
 import static utils.utils.PrintfArray;
 
-public class BubbleSort {
+public class BubbleSort_S01 {
 
     public static void bubble(int[] arr){
         if(arr==null || arr.length<2){
