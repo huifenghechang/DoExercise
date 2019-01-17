@@ -31,8 +31,8 @@ public class ArrayDivide_S01 {
     }
 
     public static void main(String[] args){
-        int[] arr = {1,0,4,5,2,7};
-        int number = 4;
+        int[] arr = {1,0,4};
+        int number = 1;
         arrayDivide(arr,number);
         printArray(arr);
 
