@@ -2,6 +2,8 @@ package code_02_bubbleSort;
 
 import java.util.Arrays;
 
+import static utils.utils.swap;
+
 public class BubbleSort_Test {
 
 	public static void bubbleSort(int[] arr) {
@@ -17,11 +19,6 @@ public class BubbleSort_Test {
 		}
 	}
 
-	public static void swap(int[] arr, int i, int j) {
-		arr[i] = arr[i] ^ arr[j];
-		arr[j] = arr[i] ^ arr[j];
-		arr[i] = arr[i] ^ arr[j];
-	}
 
 	// for test
 	public static void comparator(int[] arr) {

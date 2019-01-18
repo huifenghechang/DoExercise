@@ -1,6 +1,6 @@
 package code_03_selectionSort;
 
-import static utils.utils.PrintfArray;
+import static utils.utils.printfArray;
 import static utils.utils.swap;
 
 public class SelectionSort_S02 {
@@ -21,9 +21,9 @@ public class SelectionSort_S02 {
 
         int[] numbers = {1,3,2,5,7,0,89};
         System.out.print("The origin is:");
-        PrintfArray(numbers);
+        printfArray(numbers);
         selectionSort(numbers);
         System.out.print("The sorted is:");
-        PrintfArray(numbers);
+        printfArray(numbers);
     }
 }

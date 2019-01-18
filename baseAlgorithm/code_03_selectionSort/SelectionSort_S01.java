@@ -1,7 +1,8 @@
 package code_03_selectionSort;
 
 
-import static utils.utils.PrintfArray;
+import static utils.utils.printfArray;
+import static utils.utils.swap;
 
 /*
 * 选择排序基本思路：
@@ -31,19 +32,13 @@ public class SelectionSort_S01 {
         }
 
     }
-
-    public static void swap(int[]arr,int i,int j){
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
     public static void main(String[] args){
 
         int[] numbers = {1,3,2,5,7,98,46};
         System.out.print("The origin is:");
-        PrintfArray(numbers);
+        printfArray(numbers);
         selectionSort(numbers);
         System.out.print("The sorted is:");
-        PrintfArray(numbers);
+        printfArray(numbers);
     }
 }

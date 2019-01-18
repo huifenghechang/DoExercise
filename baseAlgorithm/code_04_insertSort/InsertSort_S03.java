@@ -1,6 +1,6 @@
 package code_04_insertSort;
 
-import static utils.utils.PrintfArray;
+import static utils.utils.printfArray;
 import static utils.utils.swap;
 
 public class InsertSort_S03 {
@@ -23,10 +23,10 @@ public class InsertSort_S03 {
 
         int[] numbers = {1,33,2,52,7,9,22};
         System.out.print("The origin is:");
-        PrintfArray(numbers);
+        printfArray(numbers);
         insertSort(numbers);
         System.out.print("The sorted is:");
-        PrintfArray(numbers);
+        printfArray(numbers);
     }
 
 

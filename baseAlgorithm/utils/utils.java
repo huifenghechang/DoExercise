@@ -1,7 +1,7 @@
 package utils;
 
 public class utils {
-    public static void PrintfArray(int[] array){
+    public static void printfArray(int[] array){
         for (int i=0;i<array.length;i++){
             System.out.print(array[i]+"、");
         }

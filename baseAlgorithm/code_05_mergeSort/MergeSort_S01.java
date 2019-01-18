@@ -1,7 +1,7 @@
 package code_05_mergeSort;
 
 
-import static utils.utils.PrintfArray;
+import static utils.utils.printfArray;
 
 public class MergeSort_S01 {
 
@@ -50,10 +50,10 @@ public class MergeSort_S01 {
     public static void main(String[] args){
         int[] arr = {1,3,4,2,9,5};
         System.out.print("The origin is:");
-        PrintfArray(arr);
+        printfArray(arr);
         mergeSort(arr);
         System.out.print("The sorted is:");
-        PrintfArray(arr);
+        printfArray(arr);
 
     }
 }
