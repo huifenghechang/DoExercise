@@ -1,7 +1,7 @@
 package code_09_NetherlandsFlags;
 
-import static code_02_bubbleSort.BubbleSort.swap;
 import static code_02_bubbleSort.BubbleSort_Test.printArray;
+import static utils.utils.swap;
 
 public class NetherLandsFlags {
 
