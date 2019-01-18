@@ -1,7 +1,5 @@
 package code_09_NetherlandsFlags;
 
-import utils.NLFCompatator;
-
 import static utils.Comparator.*;
 import static utils.utils.*;
 

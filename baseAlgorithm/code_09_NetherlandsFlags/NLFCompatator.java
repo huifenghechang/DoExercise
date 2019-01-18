@@ -1,4 +1,4 @@
-package utils;
+package code_09_NetherlandsFlags;
 
 import static code_02_bubbleSort.BubbleSort_Test.printArray;
 import static utils.utils.swap;
