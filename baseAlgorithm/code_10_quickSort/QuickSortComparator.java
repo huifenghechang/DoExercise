@@ -14,7 +14,7 @@ public class QuickSortComparator {
     }
 
     public static void quickSort(int[] arr,int left, int right){
-        if( left < right) {
+        if( left < right) { // 复习的时候，发现自己没有写递归出口，导致程序报错。
             int[] bound = partition(arr,left,right);
             quickSort(arr,left,bound[0]);
             quickSort(arr,bound[1],right);
