@@ -1,5 +1,7 @@
 package code_06_RotateMatrix;
 
+import static utils.Util.printMatrix;
+
 public class RotateMatrix {
     public static void rotateMatrix(int[][] matrix){
         if (matrix == null){
@@ -26,15 +28,6 @@ public class RotateMatrix {
             matrix[bY-i][aX] = matrix[bY][bX-i];
             matrix[bY][bX-i] = matrix[aY+i][bX];
             matrix[aY+i][bX] = tmp;
-        }
-    }
-
-    public static void printMatrix(int[][] matrix) {
-        for (int i = 0; i != matrix.length; i++) {
-            for (int j = 0; j != matrix[0].length; j++) {
-                System.out.print(matrix[i][j] + " ");
-            }
-            System.out.println();
         }
     }
 
