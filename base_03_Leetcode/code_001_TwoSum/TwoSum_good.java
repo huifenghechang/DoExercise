@@ -6,7 +6,8 @@ import static utils.utils.printfArray;
 
 /*
 * 本页代码采用时间复杂度为O(n)的算法，采用了Map类型的数据结构来实现 ~
-*
+*  Map类型的数据，其存储结构为：
+*  Map<key, value>.前面表示为键，后面表示为值。
 * */
 
 
