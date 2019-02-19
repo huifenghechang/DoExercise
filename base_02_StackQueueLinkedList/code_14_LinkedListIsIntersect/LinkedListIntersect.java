@@ -139,10 +139,11 @@ public class LinkedListIntersect {
                 cur1 = cur1.next;
             }
         }
-
         return null;
 
     }
+
+
     //判断单链表是否为环状
     public static void main(String[] args){
 
