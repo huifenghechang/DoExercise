@@ -8,7 +8,6 @@ public class MergeSort_S02 {
             return;
         }
         partition(arr,0,arr.length - 1);
-
     }
 
     public static void partition(int[] arr, int left, int right){
