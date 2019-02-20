@@ -15,6 +15,8 @@ import static utils.utils.swap;
 public class SelectionSort_S01 {
 
     public static void selectionSort(int[] arr){
+
+        // 写算法，一定要对输入进行合法性检验！！！
         if (arr==null || arr.length < 2){
             return;
         }

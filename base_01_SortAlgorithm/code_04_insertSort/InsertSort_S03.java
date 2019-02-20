@@ -9,9 +9,9 @@ public class InsertSort_S03 {
             return;
         }
 
-        for(int i=1; i< arr.length ;i++){
+        for(int i = 1; i< arr.length ;i++){
             // 插入操作
-            for (int j = i-1; j > 0;j--){
+            for (int j = i-1; j >= 0;j--){
                 if(arr[j+1] < arr[j]){
                     swap(arr,j,j+1);
                 }
@@ -21,7 +21,7 @@ public class InsertSort_S03 {
 
     public static void main(String[] args){
 
-        int[] numbers = {1,33,2,52,7,9,22};
+        int[] numbers = {1,3,2,5,7,99,0};
         System.out.print("The origin is:");
         printfArray(numbers);
         insertSort(numbers);
