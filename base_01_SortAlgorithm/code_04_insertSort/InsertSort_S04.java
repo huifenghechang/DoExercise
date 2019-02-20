@@ -6,7 +6,7 @@ import static utils.utils.swap;
 public class InsertSort_S04 {
     /*
     * 插入排序，从原来数组中的第二位数字开始插入，所以起始下标为1
-    *
+    * 插入排序具备稳定性 ~
     * */
 
     public static void insertSort(int[] arr){
