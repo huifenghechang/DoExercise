@@ -9,6 +9,7 @@ public class NetherLandsFlags {
         int less = l-1;
         int more = r+1;
         int cur = l;
+
         while (cur < more){
             if (arr[cur] < p){
                 swap(arr,cur++,++less);
