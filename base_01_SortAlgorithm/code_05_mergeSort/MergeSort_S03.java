@@ -17,7 +17,6 @@ public class MergeSort_S03 {
             return;
         }
         partition(arr,0 ,arr.length - 1);
-
     }
 
     public static void partition(int[] arr ,int left,int right){
@@ -66,6 +65,5 @@ public class MergeSort_S03 {
         mergeSort(arr);
         System.out.print("The sorted is:");
         printfArray(arr);
-
     }
 }
