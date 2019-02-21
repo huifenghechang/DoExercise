@@ -34,7 +34,9 @@ public class QuickSort_S01 {
                 cur++;
             }
         }
+
         swap(arr,more,r); // 这一行原来没有，主要的作用，是将枢轴放置在数组的之中。必须要这么做！
+
         //返回的是等于区间的下标值。
         return new int[]{less+1,more};
     }
