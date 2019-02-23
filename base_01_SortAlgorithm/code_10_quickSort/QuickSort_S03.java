@@ -36,12 +36,13 @@ public class QuickSort_S03 {
         while (cur < more){
             if (arr[cur] < pNum){
                 swap(arr,cur++,++less);
-            }else if (arr[cur] >pNum){
+            }else if (arr[cur] > pNum){
                 swap(arr,cur,--more);
             }else {
                 cur++;
             }
         }
+
         // 划分好之后，返回小于部分与大于部分的边界
         return new int[]{less,more};
     }
