@@ -34,9 +34,10 @@ public class ShellSort_S01 {
         int j;
 
         for (j= i - gap;j >= 0 && inserted < arr[j]; j -= gap){
-            // 若小于，则组内的前一个数字向后移动
+            // 若小于，则组内的前一个数字向后移动，找到带插入的位置
             arr[j+gap] = arr[j];
         }
+        // 将带插入的数字，插入到指定位置。
         arr[j + gap] = inserted;
     }
 

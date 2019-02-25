@@ -58,7 +58,7 @@ public class heapSort_S03 {
                 break;
             }
 
-            // 将最大值上移到栈顶
+            // 将最大值上移到栈顶，整棵树继续向下调整 ~
             swap(arr,largest,index);
             // 将新移动的数字，用index标记
             index = largest; // largest 为栈顶的左孩子或者右孩子
