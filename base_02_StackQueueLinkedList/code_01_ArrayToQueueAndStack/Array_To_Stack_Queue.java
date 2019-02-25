@@ -69,6 +69,7 @@ public class Array_To_Stack_Queue {
             }
             size++;
             arr[end]= obj;
+            // end 回到起始位置，并没有通过负责的取余来循环，而是通过一个简单的判断来实现。
             end = end == arr.length -1 ? 0: end + 1;
         }
 
