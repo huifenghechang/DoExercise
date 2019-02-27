@@ -2,7 +2,7 @@ package code_02_GetMinStack;
 
 import java.util.Stack;
 
-public class GetMinStack {
+public class GetMinStack_01_21 {
     public static class MyStack{
         private Stack<Integer> stackData;
         private Stack<Integer> stackMin;
@@ -16,7 +16,7 @@ public class GetMinStack {
             this.stackData.push(newNum);
         }
 
-        public Integer pop(){
+        public void pop(){
             if (this.stackData.isEmpty()){
                 throw new RuntimeException("Your stack is empty");
             }
@@ -24,10 +24,12 @@ public class GetMinStack {
             if (value == this.getMin()){
                 this.stackMin.pop();
             }
-            return value;
         }
 
-        public  Integer getMin(){
+        public int top() {
+            return stackData.peek();
+        }
+        public  int getMin(){
             if (this.stackData.isEmpty()){
                 throw new RuntimeException("Your stack is empty");
             }

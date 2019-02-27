@@ -22,7 +22,7 @@ public class CopyRandomLinkedList {
             myHashMap.put(cur,new Node(cur.data));
             cur = cur.next;
         }
-        // 第二次遍历，实现对新建链表中指针的指引
+        // 第二次遍历，实现对新建链表中指针的指引，妙！！！
         cur = head;
         while (cur != null){
             myHashMap.get(cur).random = myHashMap.get(cur.random);
