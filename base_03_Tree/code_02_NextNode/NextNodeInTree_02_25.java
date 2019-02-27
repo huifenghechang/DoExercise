@@ -1,6 +1,6 @@
 package code_02_NextNode;
 
-public class NextNodeInTree {
+public class NextNodeInTree_02_25 {
 
     public static class Node{
         int value;
@@ -18,6 +18,7 @@ public class NextNodeInTree {
     *       将中序遍历的上一个节点，叫做该节点的前驱；
     *
     * 在这里，主要将节点分成两类：
+    *
     *       若该节点有右子树，则后继为该右子树的最左边的孩子节点 。
     *       若该节点没有右子树，往上找，找到当前节点是其父节点的左孩子，那个parent节点就是原始节点的后继。
     * */
@@ -47,6 +48,7 @@ public class NextNodeInTree {
         if (node == null){
             return node;
         }
+        // while的作用，判断加循环。这里的循环条件为：节点的左孩子不为空！
         while (node.left != null){
             node = node.left;
         }

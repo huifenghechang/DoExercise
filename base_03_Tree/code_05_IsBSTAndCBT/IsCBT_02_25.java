@@ -2,8 +2,9 @@ package code_05_IsBSTAndCBT;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
-public class IsBSTAndCBT {
+public class IsCBT_02_25 {
 
     public static class Node{
         int value;
@@ -16,8 +17,26 @@ public class IsBSTAndCBT {
     }
 
     // 判断是否为“搜索二叉树”
+    /*
+    * 按照“左、中、右”的顺序，中序遍历二叉树，
+    * 若所得数据时按照升序排列的，则该树为“搜索二叉树”
+    * */
 
-    public static boolean isSBT(Node head){
+    public static boolean isBST(Node head){
+        if (head != null){
+            Stack<Node> stack = new Stack<>();
+            Node pre = null;
+
+            while (!stack.isEmpty() || head != null){
+                if (head != null){
+                    stack.push(head);
+                    head = head.left;
+                }else {
+                    head = stack.pop();
+                    stack.push(head.right);
+                }
+            }
+        }
         return  false;
     }
 
@@ -28,7 +47,7 @@ public class IsBSTAndCBT {
     public static void breadthTraversal(Node head){
         if (head != null){
             Queue<Node> queue = new LinkedList<Node>();
-            queue.add(head);
+            queue.offer(head);
 
             while (!queue.isEmpty()){
                 head = ((LinkedList<Node>) queue).pop();

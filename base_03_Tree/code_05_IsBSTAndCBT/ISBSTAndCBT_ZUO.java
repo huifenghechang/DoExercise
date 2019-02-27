@@ -19,29 +19,37 @@ public class ISBSTAndCBT_ZUO {
             return true;
         }
         boolean res = true;
+
         Node pre = null;
         Node cur1 = head;
-        Node cur2 = null;
+        Node cur2 = null; // 辅助变量，用于控制循环逻辑和流程
+
         while (cur1 != null) {
-            cur2 = cur1.left;
-            if (cur2 != null) {
+            cur2 = cur1.left;   // ---> 头结点的左孩子
+            if (cur2 != null) { // 当cur1 存在左孩子是，需要处理之
                 while (cur2.right != null && cur2.right != cur1) {
-                    cur2 = cur2.right;
+                    cur2 = cur2.right;  // -----> 左子树的最右边节点
                 }
-                if (cur2.right == null) {
-                    cur2.right = cur1;
-                    cur1 = cur1.left;
-                    continue;
+                if (cur2.right == null) { // 这种情况下，是cur2到达左孩子最右边节点的底部时，所做的处理
+                    cur2.right = cur1;  // 利用cur2的空间，临时存储一下curl的值
+                    cur1 = cur1.left;  // cur1 下移到左子树的根节点
+                    continue;// 此时，后面的语句不执行，结束本层的本次循环 ~
                 } else {
                     cur2.right = null;
                 }
             }
+            // 当cur1不存在左孩子时，只需要将根节点和其右孩子想比较即可
+            // 扫描第一个节点时，pre的指针指向的为空，所以无需比较
             if (pre != null && pre.value > cur1.value) {
                 res = false;
             }
-            pre = cur1;
-            cur1 = cur1.right;
+
+            // 前面所做的所有操作，目的是为了定位到pre指针，指向遍历中的数字。
+            // pre时相对于cur1而言的。
+            pre = cur1; // 根节点
+            cur1 = cur1.right; // 右孩子
         }
+
         return res;
     }
 

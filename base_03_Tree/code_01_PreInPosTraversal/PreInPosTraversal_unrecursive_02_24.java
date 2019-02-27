@@ -2,7 +2,7 @@ package code_01_PreInPosTraversal;
 
 import java.util.Stack;
 
-public class PreInPosTraversal_unrecursive {
+public class PreInPosTraversal_unrecursive_02_24 {
 
     public static class Node {
         int value;
@@ -60,10 +60,12 @@ public class PreInPosTraversal_unrecursive {
         if (head != null){
             Stack<Node> stack = new Stack<Node>();
             while (!stack.isEmpty() || head != null){
+                // 此处循环的目的，是将head节点的左边界，加入到栈中。
                 if (head != null){
                     stack.push(head);
                     head = head.left;
                 }else {
+                    // 若遍历到左边界的最底层，则回到其父节点，并将其右孩子加入到节点中。
                     head = stack.pop();
                     System.out.print(head.value + " ");
                     head = head.right;
@@ -90,7 +92,7 @@ public class PreInPosTraversal_unrecursive {
     * */
 
     public static void posOrderTraversal(Node head){
-        System.out.println("pos - Order-org");
+        System.out.println("pos - Order - org");
         if (head != null){
             Stack<Node> stack1 = new Stack<>();
             Stack<Node> stack2 = new Stack<>();
@@ -126,7 +128,6 @@ public class PreInPosTraversal_unrecursive {
         head.left.right = new Node(5);
         head.right.left = new Node(6);
         head.right.right = new Node(7);
-
 
         // unrecursive
         System.out.println("============unrecursive=============");
