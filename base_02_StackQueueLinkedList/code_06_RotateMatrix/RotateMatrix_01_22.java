@@ -2,7 +2,7 @@ package code_06_RotateMatrix;
 
 import static utils.Util.printMatrix;
 
-public class RotateMatrix {
+public class RotateMatrix_01_22 {
     public static void rotateMatrix(int[][] matrix){
         if (matrix == null){
             return;
@@ -38,6 +38,5 @@ public class RotateMatrix {
         rotateMatrix(matrix);
         System.out.println("=========");
         printMatrix(matrix);
-
     }
 }
