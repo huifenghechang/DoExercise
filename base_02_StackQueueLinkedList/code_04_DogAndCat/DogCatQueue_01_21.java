@@ -3,7 +3,12 @@ package code_04_DogAndCat;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class MyDogCatQueue {
+/*
+* 编程心得：
+*     本题是偏开发类的题目，主要考察的是在实现特定功能的过程中，设定特定的数据结构来满足需求。
+*         此处，创造性的引入了一个变量count,来实现对猫狗输入序列的控制，值得学习之！
+* */
+public class DogCatQueue_01_21 {
 
     public static class Pet {
         private String type;
@@ -15,7 +20,6 @@ public class MyDogCatQueue {
         public String getPetType() {
             return this.type;
         }
-
 
     }
 
@@ -51,8 +55,6 @@ public class MyDogCatQueue {
         public String getEnterPetType() {
             return this.pet.getPetType();
         }
-
-
     }
 
     public static class DogCatQueue {
