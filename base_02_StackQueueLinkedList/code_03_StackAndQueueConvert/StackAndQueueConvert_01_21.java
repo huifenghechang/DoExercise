@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class StackAndQueueConvert {
+public class StackAndQueueConvert_01_21 {
     public static class TwoStacksQueue {
         private Stack<Integer> stackPush = new Stack<>();
         private Stack<Integer> stackPop = new Stack<>();
@@ -60,6 +60,18 @@ public class StackAndQueueConvert {
 
         public void push(int pushInt){
             queue.add(pushInt);
+        }
+
+        public int pop() {
+            if (queue.isEmpty()) {
+                throw new RuntimeException("Stack is empty!");
+            }
+            while (queue.size() > 1) {
+                help.add(queue.poll());
+            }
+            int res = queue.poll();
+            swap();
+            return res;
         }
 
         public int peek(){
