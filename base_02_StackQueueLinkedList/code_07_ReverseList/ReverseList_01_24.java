@@ -1,6 +1,6 @@
 package code_07_ReverseList;
 
-public class ReverseList {
+public class ReverseList_01_24 {
     public static class Node {
         public int value;
         public Node next;
@@ -72,14 +72,14 @@ public class ReverseList {
 
     public static void main(String[] args) {
 
-    /*    Node head1 = new Node(1);
+        Node head1 = new Node(1);
         head1.next = new Node(2);
         head1.next.next = new Node(3);
         printLinkedList(head1);
         head1 = reverseList(head1);
-        printLinkedList(head1);*/
+        printLinkedList(head1);
 
-        DoubleNode head2 = new DoubleNode(1);
+       /* DoubleNode head2 = new DoubleNode(1);
         head2.next = new DoubleNode(2);
         head2.next.next = head2;
         head2.next.next = new DoubleNode(3);
@@ -87,7 +87,7 @@ public class ReverseList {
         head2.next.next.next = new DoubleNode(4);
         head2.next.next.next.next = head2.next.next;
 
-        printDoubleLinkedList(head2);
+        printDoubleLinkedList(head2);*/
 //        printDoubleLinkedList(reverseList(head2));
 
     }
