@@ -3,7 +3,7 @@ package code_05_RotaryPrintingArray;
 /*
 * 编程心得：
 *     从坐标的角度，来对待编程中，对二维数组的打印。
-*     其次，在编程的时候，结合画图，可以让编程的思路更准确和清晰
+*     其次，在编程的时候，结合画图，可以让编程的思路更准确和清晰。
 * */
 public  class RotaryPrintingArray_02_28 {
     private int[][] matrix;
