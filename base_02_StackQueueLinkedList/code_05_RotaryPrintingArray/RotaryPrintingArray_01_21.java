@@ -1,6 +1,6 @@
 package code_05_RotaryPrintingArray;
 
-public class RotaryPrintingArray {
+public class RotaryPrintingArray_01_21 {
     private int[][] matrix;
 
 
@@ -8,6 +8,7 @@ public class RotaryPrintingArray {
         // 定义矩阵的左上和右下两个位置的点
         int aX = 0;
         int bY = 0;
+
         int cX = matrix[0].length - 1;
         int dY= matrix.length - 1; // 二维数组的matrix.length 表示二维数组的行数。
         while (aX <= cX && bY <= dY) {
