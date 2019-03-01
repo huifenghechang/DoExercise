@@ -1,6 +1,6 @@
 package code_09_FindNumInSortedMatrix;
 
-public class FindNumInSortedMatrix {
+public class FindNumInSortedMatrix_01_24 {
 
     public static boolean findNumInSortedMatrix(int num,int[][] matrix){
         if (matrix==null){
