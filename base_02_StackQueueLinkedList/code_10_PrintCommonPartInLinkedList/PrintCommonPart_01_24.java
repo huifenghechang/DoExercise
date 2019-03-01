@@ -1,6 +1,6 @@
 package code_10_PrintCommonPartInLinkedList;
 
-public class PrintCommonPart {
+public class PrintCommonPart_01_24 {
 
     public static class Node{
         public int value;
