@@ -1,5 +1,9 @@
 package code_07_ReverseList;
-
+/*
+* 编程心得：
+*    在写边界条件的代码时，一定要好好的思考，仔细检查。
+*    很多时候，基本的思路是不错的，但是就是由于没有仔细分析好边界条件，导致自己做错啦。
+* */
 public class ReverseList_02_28 {
     public static class Node{
         int value;
