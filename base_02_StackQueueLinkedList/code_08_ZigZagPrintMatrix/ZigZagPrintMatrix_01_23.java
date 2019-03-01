@@ -1,6 +1,6 @@
 package code_08_ZigZagPrintMatrix;
 
-public class ZigZagPrintMatrix {
+public class ZigZagPrintMatrix_01_23 {
     public static void zigZagPrint(int[][] matrix) {
         if (matrix == null) {
             throw new RuntimeException("The matrix is null");
