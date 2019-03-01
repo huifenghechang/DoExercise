@@ -88,7 +88,7 @@ public class ReverseList_01_24 {
         head2.next.next.next.next = head2.next.next;
 
         printDoubleLinkedList(head2);*/
-//        printDoubleLinkedList(reverseList(head2));
+//        printDoubleLinkedList(reverseSingleList(head2));
 
     }
 }

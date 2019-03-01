@@ -14,7 +14,7 @@ public class ReverseList_02_28 {
         }
     }
 
-    public static Node reverseList(Node head){
+    public static Node reverseSingleList(Node head){
         Node pre = null;
         Node cur = head;
 
@@ -31,12 +31,36 @@ public class ReverseList_02_28 {
         return cur;
     }
 
+    public static class DoubleNode{
+        int value;
+        DoubleNode pre;
+        DoubleNode next;
+
+        public DoubleNode(int data){
+            this.value = data;
+        }
+
+    }
+
+    public static DoubleNode reverseDoubleList(DoubleNode head){
+        DoubleNode last = null;
+        DoubleNode next = null;
+        while (head != null){
+            next = head.next;
+            head.next = last;
+            head.pre = next;
+            last = head;
+            head = next;
+        }
+        return last;
+    }
+
     public static void main(String[] args){
         Node head1 = new Node(1);
         head1.next = new Node(2);
         head1.next.next = new Node(3);
         printLinkedList(head1);
-        printLinkedList(reverseList(head1));
+        printLinkedList(reverseSingleList(head1));
     }
 
     public static void printLinkedList(Node head) {
