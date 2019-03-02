@@ -2,7 +2,7 @@ package code_13_CopyRandomLinkedList;
 
 import java.util.HashMap;
 
-public class CopyRandomLinkedList {
+public class CopyRandomLinkedList_19_01_30 {
     public static class Node{
         int data;
         Node next;
