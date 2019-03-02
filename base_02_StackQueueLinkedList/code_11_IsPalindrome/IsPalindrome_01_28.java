@@ -2,7 +2,7 @@ package code_11_IsPalindrome;
 
 import java.util.Stack;
 
-public class IsPalindrome {
+public class IsPalindrome_01_28 {
 
     public static class Node{
         public int value;
@@ -71,22 +71,24 @@ public class IsPalindrome {
         // 上述对n1,n2赋初始值，能够保证快指针达到终点时，慢指针打向中点。
         // 当为奇数个数字时，慢指针打在中点。当为偶数个数字时，慢指针打在前半部分的最后一个数字上。
         while (n2.next != null && n2.next.next != null){
-            n1 = n1.next;
-            n2 = n2.next.next;
+            n1 = n1.next;      // 慢指针
+            n2 = n2.next.next;// 快指针
         }
 
         // 更改指针
-        n2 = n1.next;
-        n1.next = null;
-        Node n3 = null;
+        n2 = n1.next; // 后半部对称部分的起始节点
+        n1.next = null; // 将中点的后序设置为空
+        Node n3 = null; // n3 辅助节点
         while (n2 != null){
             n3 = n2.next;
             n2.next = n1;
             n1 = n2;
             n2 = n3;
         }
-        n3 = n1;
-        n2 = head;
+
+        n3 = n1; // n1作为反转后的新链表的头结点，用n3作为临时变量来保存下
+
+        n2 = head;// n2  作为原来链表的头结点
         boolean res = true;
         while (n1 != null && n2 != null){
             if (n1.value != n2.value){
@@ -96,7 +98,8 @@ public class IsPalindrome {
             n1 = n1.next;
             n2 = n2.next;
         }
-        n1 = n3.next;
+
+        n1 = n3.next; // n3为反转后的链表的头结点。
         n3.next = null;
         while (n1 != null) { // recover list
             n2 = n1.next;
