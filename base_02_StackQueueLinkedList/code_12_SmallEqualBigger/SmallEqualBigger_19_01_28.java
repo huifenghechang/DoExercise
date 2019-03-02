@@ -1,6 +1,6 @@
 package code_12_SmallEqualBigger;
 
-public class SmallEqualBigger {
+public class SmallEqualBigger_19_01_28 {
     public static class Node{
         public int data;
         public Node next;
@@ -57,7 +57,6 @@ public class SmallEqualBigger {
                     bT = head;
                 }
             }
-
 //            head = head.next;
             head = next;
         }
