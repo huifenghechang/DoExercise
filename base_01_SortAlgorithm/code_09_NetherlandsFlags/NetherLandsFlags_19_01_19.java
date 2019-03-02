@@ -3,7 +3,7 @@ package code_09_NetherlandsFlags;
 import static utils.Comparator.*;
 import static utils.utils.*;
 
-public class NetherLandsFlags_S01 {
+public class NetherLandsFlags_19_01_19 {
 
     public static void netherlandsFlags(int[] arr,int left, int right,int num){
         if (arr == null ){

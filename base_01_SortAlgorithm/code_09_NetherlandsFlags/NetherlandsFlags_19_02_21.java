@@ -3,7 +3,7 @@ package code_09_NetherlandsFlags;
 import static code_02_bubbleSort.BubbleSort_Test.printArray;
 import static utils.utils.swap;
 
-public class NetherlandsFlags_S03 {
+public class NetherlandsFlags_19_02_21 {
 
     // 将数组中的数字分为小于num,等于num以及大于num这三部分！
     public static void netherlandsFlags(int[] arr, int num){
