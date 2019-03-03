@@ -1,6 +1,6 @@
 package code_01_PreInPosTraversal;
 
-public class PreInPosTraversal_recursion_02_24 {
+public class PreInPosTraversal_recursion_19_02_24 {
     // 定义二叉树的节点
     public static class Node{
         public int value;

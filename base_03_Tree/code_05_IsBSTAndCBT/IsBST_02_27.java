@@ -1,5 +1,5 @@
 package code_05_IsBSTAndCBT;
-import code_01_PreInPosTraversal.PreInPosTraversal_recursion_02_24.Node;
+import code_01_PreInPosTraversal.PreInPosTraversal_recursion_19_02_24.Node;
 
 // 递归版，设置一个节点来存储上一次遍历的值。
 public class IsBST_02_27 {

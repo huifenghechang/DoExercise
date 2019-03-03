@@ -2,7 +2,7 @@ package code_01_PreInPosTraversal;
 
 import java.util.Stack;
 
-public class PreInPosTraversal_unrecursive_02_24 {
+public class PreInPosTraversal_unrecursive_19_02_24 {
 
     public static class Node {
         int value;
