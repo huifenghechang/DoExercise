@@ -1,8 +1,8 @@
-package code_001_TwoSum;
+package tag_01_arraries.code_001_TwoSum;
 
 import static utils.utils.printfArray;
 
-public class TwoSum_sqc {
+public class TwoSum_f_19_03_11 {
     public static int[] twosum(int[] nums, int target){
         if (nums ==null){
             System.out.println("Error Input");

@@ -1,4 +1,4 @@
-package code_001_TwoSum;
+package tag_01_arraries.code_001_TwoSum;
 
 import java.util.HashMap;
 
@@ -11,7 +11,7 @@ import static utils.utils.printfArray;
 * */
 
 
-public class TwoSum_good {
+public class TwoSum_s1_19_03_11 {
     public static int[] twosum_n(int[] nums, int target){
 
         // 对数据合法性判断
@@ -36,8 +36,8 @@ public class TwoSum_good {
 
 
     public static void main(String[] args){
-        int[] nums = {2,7,11,15};
-        int target = 9;
+        int[] nums = {3,3};
+        int target = 6;
         int[] res = twosum_n(nums,target);
         printfArray(res);
     }
