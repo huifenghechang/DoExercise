@@ -1,4 +1,4 @@
-package tag_01_arraries.code_001_TwoSum;
+package tag_01_arraries.code_001_twoSum;
 
 import static utils.utils.printfArray;
 
