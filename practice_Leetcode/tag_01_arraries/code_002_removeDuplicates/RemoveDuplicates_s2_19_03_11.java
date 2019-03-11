@@ -12,6 +12,7 @@ public class RemoveDuplicates_s2_19_03_11 {
                 nums[++p1] = nums[p2];
             }
         }
-        return p1+ 1;
+        return p1+1;
+
     }
 }
