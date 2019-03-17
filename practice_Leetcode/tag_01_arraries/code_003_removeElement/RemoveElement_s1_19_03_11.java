@@ -1,6 +1,6 @@
 package tag_01_arraries.code_003_removeElement;
 
-public class removeElement_s1_19_03_11 {
+public class RemoveElement_s1_19_03_11 {
 
     public int removeElement_err(int[] nums, int val) {
         if (nums == null ){
