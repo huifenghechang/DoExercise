@@ -8,6 +8,11 @@ public class T206_ReverseList {
         }
     }
 
+    /*
+    * 迭代版：
+    * 从前往后：
+    *   看做将原链表加入到新链表之中。设置新链表的表头为newH = null.然后依次迭代。
+    * */
     public ListNode reverseList1(ListNode head) {
         if (head != null){
             ListNode p1 = null;
@@ -35,6 +40,10 @@ public class T206_ReverseList {
         return newHead;
     }
 
+    /*
+    * 递归版
+    * 从后往前。之所以能往前，是因为递归情况下，系统栈依次弹出所导致的。
+    * */
     public static void main(String[] args){
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
