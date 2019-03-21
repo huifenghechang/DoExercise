@@ -1,9 +1,8 @@
-public class ReverseList {
+public class T206_ReverseList {
 
     public static class ListNode {
         int val;
         ListNode next;
-
         ListNode(int x) {
             val = x;
         }
@@ -41,7 +40,6 @@ public class ReverseList {
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
         ListNode head2 = reverseList(head);
-
         while (head2 != null){
             System.out.println(head2.val);
             head2 = head2.next;
