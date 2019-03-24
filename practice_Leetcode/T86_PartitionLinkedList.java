@@ -1,5 +1,7 @@
 public class T86_PartitionLinkedList {
-
+/*
+* 2019.03.22
+* */
     public static class ListNode {
         int val;
         ListNode next;
@@ -54,6 +56,31 @@ public class T86_PartitionLinkedList {
         }
     }
 
+
+    /*
+    * 通过创建临时节点，避免了对头结点是否为空的判断，简化了流程！
+    * */
+    public static ListNode partition2(ListNode head, int x) {
+        ListNode lessHead = new ListNode(0);
+        ListNode moreHead = new ListNode(0);
+        ListNode less_ptr = lessHead;
+        ListNode more_ptr = moreHead;
+
+        while (head!=null){
+            if (head.val < x){
+                less_ptr.next = head;
+                less_ptr = head;
+            }
+            else {
+                more_ptr.next = head;
+                more_ptr = head;
+            }
+        }
+        less_ptr.next = moreHead.next;
+        more_ptr.next = null;
+        return less_ptr.next;
+    }
+
     public static void main(String[] args){
         ListNode head = new ListNode(1);
         head.next = new ListNode(4);
@@ -66,9 +93,5 @@ public class T86_PartitionLinkedList {
             System.out.println(head2.val);
             head2 = head2.next;
         }
-
-
-
-
     }
 }

@@ -1,4 +1,4 @@
-public class T142_DetectCycle {
+public class T142_DetectCycle_II {
     public  class ListNode {
         int val;
         ListNode next;

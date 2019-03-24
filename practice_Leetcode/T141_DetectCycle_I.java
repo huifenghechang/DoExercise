@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class T141_DetectCycle {
+public class T141_DetectCycle_I {
     public  class ListNode {
         int val;
         ListNode next;

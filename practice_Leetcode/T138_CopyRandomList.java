@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class CopyRandomList {
+public class T138_CopyRandomList {
 
     class Node {
         public int val;
