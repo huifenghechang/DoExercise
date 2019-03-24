@@ -1,4 +1,4 @@
-package threads.BounceThread;
+package threads_learning.BounceThread;
 
 import java.awt.*;
 import java.util.*;

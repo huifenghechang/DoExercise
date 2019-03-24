@@ -1,4 +1,4 @@
-package threads.ThreadWays;
+package threads_learning.ThreadWays;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;

@@ -1,4 +1,4 @@
-package threads.Bounce;
+package threads_learning.Bounce;
 
 import java.awt.geom.*;
 

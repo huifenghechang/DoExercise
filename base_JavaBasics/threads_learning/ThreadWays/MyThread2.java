@@ -1,4 +1,4 @@
-package threads.ThreadWays;
+package threads_learning.ThreadWays;
 
 public class MyThread2 implements Runnable {
     @Override

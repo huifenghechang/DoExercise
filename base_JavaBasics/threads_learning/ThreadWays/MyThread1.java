@@ -1,4 +1,4 @@
-package threads.ThreadWays;
+package threads_learning.ThreadWays;
 
 public class MyThread1 extends Thread {
     // 创建线程类

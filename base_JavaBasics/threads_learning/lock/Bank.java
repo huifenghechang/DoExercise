@@ -1,4 +1,4 @@
-package threads.lock;
+package threads_learning.lock;
 
 
 import java.util.concurrent.locks.Condition;
