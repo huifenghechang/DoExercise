@@ -1,15 +1,32 @@
 import javax.management.RuntimeErrorException;
 import java.util.HashMap;
 
-public class IntToRoman {
+public class T12_IntToRoman {
 
     public static String intToRoman(int num) {
+        String[][] m = { {"", "M", "MM", "MMM"},
+                {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"},
+                {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"},
+                {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"}
+        };
+
+        int[] d ={1000,100,10,1};
+        String res = "";
+        for (int i=0; i< d.length;i++){
+            res  += m[i][num/d[i]];
+            num = num % d[i];
+        }
+        return res;
+
+
+    }
+
+    public static String intToRoman190316(int num) {
         if (num < 1 || num > 3999){
             throw new IllegalArgumentException("The num is not legal");
         }
         HashMap<Integer,String> map = new HashMap<>();
         map.put(1,"I");map.put(4,"IV");map.put(5,"V");
-
         map.put(10,"X");map.put(9,"IX");
         map.put(50,"L");map.put(40,"XL");
         map.put(100,"C");map.put(90,"XC");
@@ -58,6 +75,6 @@ public class IntToRoman {
     }
 
     public static void main(String[] args){ ;
-        System.out.println(intToRoman(3));
+        System.out.println(intToRoman(9));
     }
 }
