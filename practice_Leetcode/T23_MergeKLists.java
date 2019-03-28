@@ -11,6 +11,65 @@ public class T23_MergeKLists {
     }
 
     /*
+    *
+    * 调用递归函数，则需要调用和递归函数相同的输入
+    *
+    * */
+
+    public ListNode mergeKLists190328(ListNode[] lists){
+        if (lists.length == 1){
+            return lists[0];
+        }
+        if (lists.length == 2){
+            ListNode h1 = lists[0];
+            ListNode h2 = lists[1];
+            return mergeTwoList(h1,h2);
+        }
+
+        int mid = lists.length / 2;
+        ListNode[] left = new ListNode[mid];
+        ListNode[] right = new ListNode[lists.length - mid];
+
+        for (int i= 0; i < mid ;i++){
+            left[i] = lists[i];
+        }
+
+        for (int j = 0; j< lists.length - mid;j++){
+            right[j] = lists[mid+j];
+        }
+
+        ListNode l1 = mergeKLists190328(left);
+        ListNode l2 = mergeKLists190328(right);
+        return mergeTwoList(l1,l2);
+    }
+
+    public ListNode mergeTwoList(ListNode h1,ListNode h2){
+        ListNode dumpyH = new ListNode(-1);
+        ListNode cur = dumpyH;
+        while (h1!=null && h2!=null){
+            if (h1.val < h2.val){
+                cur.next = h1;
+                cur = h1;
+                h1 = h1.next;
+            }else {
+                cur.next = h2;
+                cur = h2;
+                h2 = h2.next;
+            }
+        }
+
+        if (h1 != cur){
+            cur.next = h1;
+        }
+
+        if (h2 != cur){
+            cur.next = h2;
+        }
+        return dumpyH.next;
+
+    }
+
+    /*
     * 编程心得：
     * 使用Collection中的sort方法。
     * 需要练习使用容器的用法。
