@@ -1,41 +1,54 @@
 package firstStep.welcome;
 
 import java.io.Console;
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Welcome {
 
+    static class Man {
+        int age;
+    }
+
     enum Size{SMALL,MDEIUM,LARGE,EXTRA_LARGE};
 
     public static void main(String[] args){
+      /*  Number array[] = {1,3,4,5,6,2};
+        Number max = getMax(array);
+
+        System.out.println(max);*/
+      /*char c = '碎';
+      int i = 8;
+      int y = -i++;
+      System.out.println(y);*/
+
+      double d1 = 2.15;
+      double d2 = 1.10;
+      double f = 0.92933457788845;
+      short a1 = 9;
+      short a2 =19;
+      Man man = new Man();
+
+      System.out.println("The short value is " +man.age);
+      System.out.println("double 类型运算的结果："+(d2-d1));
+
+      BigDecimal v1 = new BigDecimal("2.15");
+      BigDecimal v2 = new BigDecimal("1.10");
+      System.out.println("BigDecimal类型的结果"+ v2.subtract(v1));
+      System.out.println("float类型的结果"+ f);
 
 
-        int n = 8;
-        int move_to_left = (n << 2);
-        int move_to_right = (n >> 2);
-        int move_to_three = (n >>> 3);
-
-        String lover = "Ge Nan Nan";
-        Size s = Size.LARGE;
-
-        /*StringBuilder builder = new StringBuilder();
-        builder.append("Hello");
-        builder.append("World");
-        String hi = builder.toString();*/
-
-       /* Scanner in = new Scanner(System.in);
-        System.out.println("How old are you ?");
-        int age = in.nextInt();*/
 
 
-//        System.out.println("Your age is " + age);
 
-        /*System.out.println("move_to_left is" + move_to_left);
-        System.out.println("move_to_right is" + move_to_right);
-        System.out.println("move_to_three is" + move_to_three);
-        System.out.println("my lover is "+ lover.substring(3));
-        System.out.println(hi);*/
+    }
 
-
+    // 通过 extends 关键字可以限制泛型的类型
+    public static  <T extends Number> T getMax(T array []){
+        T max = array[0];
+        for (T element : array){
+            max = element.doubleValue() > max.doubleValue() ? element : max;
+        }
+        return max;
     }
 }
