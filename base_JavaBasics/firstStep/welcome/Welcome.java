@@ -1,13 +1,21 @@
 package firstStep.welcome;
 
-import java.io.Console;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Welcome {
 
     static class Man {
-        int age;
+        private int id;
+        private static int nextId = 1;
+
+        public void setId(){
+            this.id = nextId;
+            nextId++;
+        }
+
+
+
     }
 
     enum Size{SMALL,MDEIUM,LARGE,EXTRA_LARGE};
@@ -27,15 +35,14 @@ public class Welcome {
       double f = 0.92933457788845;
       short a1 = 9;
       short a2 =19;
-      Man man = new Man();
-
-      System.out.println("The short value is " +man.age);
+      /*
       System.out.println("double 类型运算的结果："+(d2-d1));
 
       BigDecimal v1 = new BigDecimal("2.15");
       BigDecimal v2 = new BigDecimal("1.10");
       System.out.println("BigDecimal类型的结果"+ v2.subtract(v1));
       System.out.println("float类型的结果"+ f);
+      */
 
 
 
