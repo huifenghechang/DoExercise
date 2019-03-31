@@ -3,7 +3,11 @@ import java.util.HashMap;
 
 public class T12_IntToRoman {
 
-    public static String intToRoman(int num) {
+    /*
+    * 数字转化，最重要的是每个数字的基数。
+    * 原数与基数相除，变得到该位上的数字。
+    * */
+    public static String intToRoman190326(int num) {
         String[][] m = { {"", "M", "MM", "MMM"},
                 {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"},
                 {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"},
@@ -75,6 +79,6 @@ public class T12_IntToRoman {
     }
 
     public static void main(String[] args){ ;
-        System.out.println(intToRoman(9));
+        System.out.println(intToRoman190326(9));
     }
 }

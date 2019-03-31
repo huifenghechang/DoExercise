@@ -1,6 +1,6 @@
 import java.util.Iterator;
 
-public class SwapPair {
+public class T24_SwapPair {
 
     public static class ListNode {
       int val;
@@ -8,10 +8,33 @@ public class SwapPair {
       ListNode(int x) { val = x; }
   }
 
+  /*
+  * 关于链表的题目，可以多设置几个指针，来保存节点前后的信息。
+  * */
+    public static ListNode swapPairs190331(ListNode head){
+        ListNode dumpy = new ListNode(-1);
+        dumpy.next = head;
+        ListNode pre = dumpy;
 
-    public static ListNode swapPairs(ListNode head) {
+        ListNode first ;
+        ListNode second;
+        while (pre.next != null && pre.next.next != null){
+            first = pre.next;
+            second = pre.next.next;
+
+            // swap action
+            first.next = second.next;
+            second.next = first;
+
+            pre.next = second;
+            pre = pre.next.next;
+        }
+        return dumpy.next;
+    }
+
+    public static ListNode swapPairs190320(ListNode head) {
     /*
-    * 要点：设置一个节点，保存当前交换节点对中，第一个节点的前一个节点。
+    * 要点：设置一个节点，保存当前交换节点对中，第一个节点对中的前一个节点。
     * */
         ListNode dumpy = new ListNode(-1);
         dumpy.next = head;
@@ -68,7 +91,7 @@ public class SwapPair {
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
 
-        swapPairs(head);
+        swapPairs190320(head);
     }
 
 
