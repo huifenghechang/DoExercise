@@ -1,5 +1,51 @@
 public class T376_WiggleMaxLength {
 
+    public int wiggleMaxLength190407(int[] nums) {
+
+        /*
+        *在使用switch--case结构的时候，设置case情况，需要设置一个变量来负责跳转！！！
+        *
+        * */
+
+        if(nums.length < 2){
+            return nums.length;
+        }
+        final int START = 1;
+        final int UP = 2;
+        final int DOWN = 3;
+
+        int STATE = START;
+        int length = 1;
+
+        for (int i=1; i< nums.length;i++){
+            switch (STATE){
+                case START:{
+                    if (nums[i] > nums[i-1]){
+                        STATE = UP;
+                        length++;
+                    }else if (nums[i] < nums[i-1]){
+                        STATE = DOWN;
+                        length++;
+                    }
+                    break;
+                }
+                case UP:{
+                    if (nums[i] < nums[i-1]){
+                        STATE = DOWN;
+                        length++;
+                    }
+                    break;
+                }
+                case DOWN:{
+                    if (nums[i] > nums[i-1]){
+                        STATE = UP;
+                        length++;
+                    }
+                }
+            }
+        }
+        return length;
+    }
 
     public int wiggleMaxLength190331(int[] nums){
         final int START = 0;
@@ -35,11 +81,13 @@ public class T376_WiggleMaxLength {
         return length;
     }
 
-    /*
-    * 摆动序列：
-    * 所谓摆动序列的长度，其实就是两者连线之后，趋势UP 和 Down交替。
-    * */
     public int wiggleMaxLength190328(int[] nums) {
+
+        /*
+         * 摆动序列：
+         * 所谓摆动序列的长度，其实就是两者连线之后，趋势UP 和 Down交替。
+         * */
+
          final int BEGIN = 0;
          final int UP = 1;
          final int DOWN = 2;

@@ -1,4 +1,3 @@
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 
 import java.util.Stack;
 
@@ -36,6 +35,7 @@ public class T402_RemoveKdigits {
 
         String  minResult = res.reverse().toString();
         int i=0;
+        
         while (i < minResult.length()&& minResult.charAt(i)=='0'){
             i++;
         }
