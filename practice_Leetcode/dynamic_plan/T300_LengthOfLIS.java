@@ -1,3 +1,5 @@
+package dynamic_plan;
+
 public class T300_LengthOfLIS {
 
     public int lengthOfLIS(int[] nums) {

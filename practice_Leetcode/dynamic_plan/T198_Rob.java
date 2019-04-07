@@ -1,3 +1,5 @@
+package dynamic_plan;
+
 public class T198_Rob {
 
     public int rob(int[] nums) {
