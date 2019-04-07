@@ -1,3 +1,5 @@
+package NewCoder;
+
 import java.util.Scanner;
 
 public class NK_bigNumberMultiply {
