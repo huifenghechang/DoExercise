@@ -14,6 +14,10 @@ public class Welcome {
             nextId++;
         }
 
+        public void hello(){
+
+        }
+
 
 
     }
