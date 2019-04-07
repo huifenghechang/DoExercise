@@ -18,7 +18,7 @@ public class Welcome {
 
         }
 
-        public void hello2(){
+        public void hello8(){
 
         }
 
