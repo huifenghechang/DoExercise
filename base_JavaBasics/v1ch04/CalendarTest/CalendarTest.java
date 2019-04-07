@@ -15,6 +15,10 @@ public class CalendarTest
 
    }
 
+   public class Hello2{
+
+   }
+
    public static void main(String[] args)
    {
       // construct d as current date
