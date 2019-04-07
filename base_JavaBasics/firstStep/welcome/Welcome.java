@@ -22,7 +22,7 @@ public class Welcome {
 
         }
 
-        public void hello9(){
+        public void hello10(){
 
         }
 
