@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 有参构造注入-->
+    <bean id="user" class="model.User" scope="singleton">
+        <constructor-arg name="name" value="SQQ"></constructor-arg>
+    </bean>
+
+    <!--静态工厂方法-->
+    <!--<bean id="user" class="factory.UserFactory" factory-method="getUser"></bean>-->
+
+    <!--实例工厂方法-->
+    <!--<bean id="userFactory" class="factory.UserFactory"></bean>-->
+    <!--<bean id="user" factory-bean="userFactory" factory-method="getUser2"></bean>-->
+
+    <!--使用set方法注入-->
+    <bean id="book" class="model.Book">
+        <property name="bookName" value="鲁冰逊漂流记"></property>
+    </bean>
+
+    <!--注入对象属性-->
+    <bean id="userDao" class="model.UserDao"></bean>
+    <bean id="userService" class="model.UserService">
+<!--
+        <property name="userDao" ref="userDao"></property>
+-->
+    </bean>
+
+    <!--复杂属性的注入-->
+    <bean id="shop"  class="model.Shop">
+        <property name="arrs">
+            <list>
+                <value>LiLy</value>
+                <value>absent</value>
+                <value>manifest</value>
+            </list>
+        </property>
+
+        <property name="list">
+            <list>
+                <value>List1</value>
+                <value>List2</value>
+                <value>List3</value>
+            </list>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="aa" value="Nancy"></entry>
+                <entry key="bb" value="Robin"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <!--使用注解分方式管理Bean-->
+    <!--扫描包里面的类、方法、属性上面是否有注解-->
+    <context:component-scan base-package="model"></context:component-scan>
+
+</beans>
