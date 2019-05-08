@@ -1,3 +1,5 @@
+package jdbcTemplateDemo;
+
 public class Student {
     private String stu_name;
     private String password;
@@ -21,6 +23,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student [stu_name=" + stu_name + ", password=" + password + "]";
+        return "jdbcTemplateDemo.Student [stu_name=" + stu_name + ", password=" + password + "]";
     }
 }

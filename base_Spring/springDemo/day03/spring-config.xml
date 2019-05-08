@@ -11,11 +11,11 @@
         <property name="password" value="admin"></property>
     </bean>
 
-    <bean id="studentDao" class="StudentDao">
+    <bean id="studentDao" class="jdbcTemplateDemo.StudentDao">
         <property name="jdbcTemplate" ref="jdbcTemplate"></property>
     </bean>
 
-    <bean id="studentService" class="StudentService">
+    <bean id="studentService" class="jdbcTemplateDemo.StudentService">
         <!--逐入studentDao对象-->
         <property name="studentDao" ref="studentDao"></property>
     </bean>
