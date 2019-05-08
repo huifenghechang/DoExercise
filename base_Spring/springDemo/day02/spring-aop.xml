@@ -7,29 +7,37 @@
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <!--在spring核心配置文件中，开启aop操作-->
+    <!--注意！该配置应该放在bean之前开启。顺序还是很重要的！-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
     <bean id="book" class="aop.model.Book"></bean>
     <bean id="bookProxy" class="aop.model.BookProxy"></bean>
 
+
+
     <!--配置aop的操作-->
     <!-- 2 配置aop操作 -->
+<!--
     <aop:config>
-        <!-- 2.1 配置切入点 -->
+        &lt;!&ndash; 2.1 配置切入点 &ndash;&gt;
         <aop:pointcut expression="execution(* aop.model.Book.*(..))" id="pointcut1"/>
 
-        <!-- 2.2 配置切面
+        &lt;!&ndash; 2.2 配置切面
             把增强用到方法上面
-        -->
+        &ndash;&gt;
         <aop:aspect ref="bookProxy">
-            <!-- 配置增强类型
+            &lt;!&ndash; 配置增强类型
                 method： 增强类里面使用哪个方法作为前置
-            -->
-           <!-- <aop:before method="before1" pointcut-ref="pointcut1"/>
-            <aop:after method="after1" pointcut-ref="pointcut1"/>-->
-            <!-- around 是在方法调用之前和调用之后，都会调用！！!-->
+            &ndash;&gt;
+           &lt;!&ndash; <aop:before method="before1" pointcut-ref="pointcut1"/>
+            <aop:after method="after1" pointcut-ref="pointcut1"/>&ndash;&gt;
+            &lt;!&ndash; around 是在方法调用之前和调用之后，都会调用！！!&ndash;&gt;
             <aop:around method="around1" pointcut-ref="pointcut1"/>
 
         </aop:aspect>
     </aop:config>
+-->
 
 
 

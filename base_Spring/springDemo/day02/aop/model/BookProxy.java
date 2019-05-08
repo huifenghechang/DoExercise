@@ -1,9 +1,13 @@
 package aop.model;
 
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 
+@Aspect
 public class BookProxy {
 
+    @Before(value = "execution(* aop.model..Book.*(..))")
     public void  before1(){
         System.out.println("前置增强...");
     }
