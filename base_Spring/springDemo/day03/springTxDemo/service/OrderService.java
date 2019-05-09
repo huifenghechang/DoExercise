@@ -1,7 +1,9 @@
 package springTxDemo.service;
 
+import org.springframework.transaction.annotation.Transactional;
 import springTxDemo.dao.OrderDao;
 
+@Transactional
 public class OrderService {
     private OrderDao orderDao;
 
@@ -13,7 +15,7 @@ public class OrderService {
     public void accountMoney(){
         orderDao.lessMoney();
 
-//        int k = 99 / 0;
+        int k = 99 / 0;
         orderDao.moreMoney();
     }
 }
