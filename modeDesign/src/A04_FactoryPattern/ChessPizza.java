@@ -5,4 +5,8 @@ public class ChessPizza extends Pizza{
         this.name = "ChessPizza";
     }
 
+    @Override
+    public void prepare() {
+
+    }
 }
