@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="demo1" class="Demo1"></bean>
+    <bean id="demo2" class="Demo2" init-method="initMethod" destroy-method="destroyMethod"></bean>
+
+    <!--Demo3的配置文件-->
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+    <bean class="Demo3" id="demo3"/>
+
+
+    <!--<bean name="giraffeService" class="GiraffeService" init-method="initMethod" destroy-method="destroyMethod">-->
+        <!--<property name="name" value="李光洙"></property>-->
+    <!--</bean>-->
+
+    <!-- 此处的配置，是在实例化的时候会有什么作用呢？-->
+    <!--<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />-->
+    <!--<bean class="CustomerBeanPostProcessor" id="customerBeanPostProcessor"/>-->
+</beans>
