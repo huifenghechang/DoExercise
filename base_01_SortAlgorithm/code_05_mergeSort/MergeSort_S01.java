@@ -22,8 +22,6 @@ public class MergeSort_S01 {
         int mid = (left + right) / 2;
         mergeSort(arr,left,mid);
         mergeSort(arr,mid + 1,right); //原代码为mergeSort(arr,mid,right);
-
-
         merge(arr,left,mid,right);
     }
 
